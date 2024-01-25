@@ -1,4 +1,4 @@
-name: Github Actions for TAS
+name: Github Actions for TAS Module 2 Task
 on: push
 jobs: 
   Test:
