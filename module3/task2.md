@@ -5,5 +5,3 @@
 3. Undefined is not a reserved word. 
 
 4. NaN (Not a Number) is of type "number" in Javascript.
-
-5. 
