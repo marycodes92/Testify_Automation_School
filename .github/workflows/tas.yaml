@@ -8,3 +8,15 @@ jobs:
       - run: echo "This job automatically triggered by ${{ github.event_name }} event"
       - run: npm install 
       - run: npm run test
+    
+    messageSlack: 
+      runs-on: ubuntu-latest
+      steps:
+      - name: Notification Slack
+        uses: rtCamp/action-slack-notify@v2
+        env: 
+          SLACK_CHANNEL: task-review
+          SLACK_TITLE: MOnuorah-CI
+          SLACK_USERNAME: githubCI
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_MESSAGE: "Mary Onuorah's CI"
