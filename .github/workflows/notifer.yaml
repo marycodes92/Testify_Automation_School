@@ -1,4 +1,4 @@
-name: Slack Notifier
+name: JavaScript Task
 
 on: push
 
@@ -11,7 +11,7 @@ jobs:
       uses: rtCamp/action-slack-notify@v2
       env: 
         SLACK_CHANNEL: task-review
-        SLACK_TITLE: javascript-course-ci
+        SLACK_TITLE: MOnuorah-CI
         SLACK_USERNAME: githubCI
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-        SLACK_MESSAGE: "Javascript-course continuous integration"
+        SLACK_MESSAGE: "Mary Onuorah's CI"
