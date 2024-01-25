@@ -8,4 +8,14 @@ jobs:
       - run: echo "This job automatically triggered by ${{ github.event_name }} event"
       - run: npm install 
       - run: npm run test
-     
+  
+    env: 
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+    steps:
+      - name: Slack Notification
+        uses: act10ns/slack@v1
+        with: 
+          status: ${{ job.status }}
+          channel: '#task-review'
+        if: always()
