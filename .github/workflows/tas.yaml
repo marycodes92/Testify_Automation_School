@@ -1,0 +1,10 @@
+name: Github Actions for TAS
+on: push
+jobs: 
+  Test:
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v2
+      - run: echo "This job automatically triggered by ${{ github.event_name }} event"
+      - run: npm run test
+     
