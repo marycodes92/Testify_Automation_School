@@ -4,14 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run",
-    "test-gui": "npx cypress open",
-    "start": "node --trace-warnings ... node src/task3.js"
+    "start": "node module2/index.js "
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "cypress": "^10.11.0"
-  }
+  "license": "ISC"
 }
