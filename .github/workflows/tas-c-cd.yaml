@@ -1,4 +1,4 @@
-name: Github Actions for TAS Module 2 Task
+name: JavaScript Tasks - CI/CD
 on: push
 jobs: 
   Test:
