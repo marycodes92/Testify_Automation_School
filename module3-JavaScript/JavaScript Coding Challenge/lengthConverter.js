@@ -17,6 +17,6 @@ console.log('This is the length of my box in meters:', convert(90))
 
 
 
-// Return the number of vowels in a string.
-// Create a function that filters out negative numbers
+
+
 
