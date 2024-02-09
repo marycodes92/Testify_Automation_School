@@ -37,10 +37,10 @@ const books = [
     }
 ]
 
-for(let book = 0; book <= books.length; book++){
+for(let book = 0; book < books.length; book++){
     if(books[book].reading === true ){
         console.log(books[book])
     } else{
         console.log("You're not reading any book yet");
     }
-}
+} 
