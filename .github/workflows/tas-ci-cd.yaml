@@ -1,5 +1,7 @@
 name: JavaScript Tasks - CI/CD
 on: push
+on: schedule:
+  - cron: "0 0 * * *"
 jobs: 
   Test:
     runs-on: ubuntu-latest
@@ -17,4 +19,4 @@ jobs:
         SLACK_CHANNEL: task-review
         SLACK_TITLE: MOnuorah-CI
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-        Status: ${{ job.status }}
+        Status: ${{ job.status }} 

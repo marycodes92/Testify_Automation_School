@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node module2-CI_CD/index.js "
+    "start": "node module2-CI_CD/index.js"
   },
   "keywords": [],
   "author": "",
