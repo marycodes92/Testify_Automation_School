@@ -1,14 +1,11 @@
-# name: "TAS CI/CD"
-# on:
-#   schedule:
-#   - cron: "0 0 * * *"
+name: "TAS CI/CD"
+on:
+  schedule:
+  - cron: "0 0 * * *"
 
-# jobs:
-#   stale:
-#     runs-on: ubuntu-latest
-#     steps:
-#     - uses: actions/stale@v1.1.0
-#       with:
-#         repo-token: ${{ secrets.GITHUB_TOKEN }}
-#         stale-issue-message: 'Message to comment on stale issues. If none provided, will not mark issues stale'
-#         stale-pr-message: 'Message to comment on stale PRs. If none provided, will not mark PRs stale'
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v2
+    - run: echo "This job automatically triggered by ${{ github.event_name }} event"
+    - run: npm start

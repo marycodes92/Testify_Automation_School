@@ -1,8 +1,5 @@
 name: JavaScript Tasks - CI/CD
 on: push
-on: 
-  schedule:
-    - cron: "0 0 * * *"
 jobs: 
   Test:
     runs-on: ubuntu-latest
