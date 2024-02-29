@@ -24,7 +24,8 @@
 							"pm.test('verify API status', ()=>{",
 							"    pm.expect(respData.status).to.eql('OK');",
 							"})",
-							""
+							"",
+							"postman.setNextRequest('Place a book order')"
 						],
 						"type": "text/javascript"
 					}
