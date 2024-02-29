@@ -143,13 +143,16 @@
 					"script": {
 						"id": "df6f2247-3e0a-4b51-b130-d2eb3e2eafcc",
 						"exec": [
-							"const respData = pm.response.json()",
+							"const respData = pm.response.json();",
+							"",
 							"pm.test('verify the book name and author', ()=>{",
-							"    pm.expect(respData).to.be.an(Object);",
-							"    pm.expect(respData.id).to.eql(5)",
+							"    pm.expect(respData).to.be.an('object');",
+							"    pm.expect(respData.id).to.eql(5);",
 							"    pm.expect(respData.name).to.eql('Untamed');",
-							"    pm.expect(respData.author).to.eql('Glennon Doyle')",
-							"})"
+							"    pm.expect(respData.author).to.eql('Glennon Doyle');",
+							"})",
+							"",
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -242,7 +245,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"bookId\": {{bookId}},\n  \"customerName\": \"Mary Onuorah\"\n}",
+					"raw": "{\n  \"bookId\": {{bookId}},\n  \"customerName\": {{$randomFullName}}\n}",
 					"options": {
 						"raw": {
 							"language": "json"
