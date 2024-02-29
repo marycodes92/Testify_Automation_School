@@ -73,7 +73,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n   \"clientName\": \"Mary Onuorah\",\n   \"clientEmail\": \"onuorahmary@gmail.com\"\n}",
+					"raw": "{\n   \"clientName\": \"Mary Onuorah\",\n   \"clientEmail\": \"{{$randomEmail}}\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
