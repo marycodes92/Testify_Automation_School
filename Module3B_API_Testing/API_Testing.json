@@ -374,6 +374,20 @@
 		},
 		{
 			"name": "Update an order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "586bd609-226f-40de-9338-ac92c769cd0f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "450df073-f297-4a97-bcb6-72501f2e8999",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -467,7 +481,7 @@
 					"variable": [
 						{
 							"key": "orderId",
-							"value": "UlhcaO8R4Nig-LE6UiI-H"
+							"value": "{{orderId}}"
 						}
 					]
 				}
