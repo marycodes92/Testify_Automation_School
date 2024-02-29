@@ -37,7 +37,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{baseUrl}}/status"
+				"url": "https://simple-books-api.glitch.me/status"
 			},
 			"response": []
 		},
@@ -80,7 +80,7 @@
 						}
 					}
 				},
-				"url": "{{baseUrl}}/api-clients"
+				"url": "https://simple-books-api.glitch.me/api-clients"
 			},
 			"response": []
 		},
@@ -131,7 +131,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{baseUrl}}/books"
+				"url": "https://simple-books-api.glitch.me/books"
 			},
 			"response": []
 		},
@@ -180,9 +180,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/books/:bookId",
+					"raw": "https://simple-books-api.glitch.me/books/:bookId",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"simple-books-api",
+						"glitch",
+						"me"
 					],
 					"path": [
 						"books",
@@ -272,7 +275,7 @@
 						}
 					}
 				},
-				"url": "{{baseUrl}}/orders"
+				"url": "https://simple-books-api.glitch.me/orders"
 			},
 			"response": []
 		},
@@ -316,7 +319,7 @@
 						}
 					}
 				},
-				"url": "{{baseUrl}}/orders"
+				"url": "https://simple-books-api.glitch.me/orders"
 			},
 			"response": []
 		},
@@ -359,9 +362,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/orders/:orderId",
+					"raw": "https://simple-books-api.glitch.me/orders/:orderId",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"simple-books-api",
+						"glitch",
+						"me"
 					],
 					"path": [
 						"orders",
@@ -416,9 +422,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/orders/:orderId/",
+					"raw": "https://simple-books-api.glitch.me/orders/:orderId/",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"simple-books-api",
+						"glitch",
+						"me"
 					],
 					"path": [
 						"orders",
@@ -475,9 +484,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/orders/:orderId",
+					"raw": "https://simple-books-api.glitch.me/orders/:orderId",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"simple-books-api",
+						"glitch",
+						"me"
 					],
 					"path": [
 						"orders",
