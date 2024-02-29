@@ -84,10 +84,14 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "8a6c8044-acc5-41d9-9eff-3d15283571d6",
+						"id": "1ccfc0eb-449b-48c5-8fd2-ca097226c937",
 						"exec": [
 							"// Parsing response body as Json",
 							"const responseData = pm.response.json();",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
 							"",
 							"pm.test('verify the ID of a book', ()=>{",
 							"    let nonFictionBookUntamed = responseData.find((book)=>{",
@@ -96,16 +100,16 @@
 							"    pm.expect(nonFictionBookUntamed.id).to.eql(5);",
 							"});",
 							"",
-							"",
+							"// Finding the book with namee 'Th Russian'",
 							"const russianBook = responseData.find((book)=>{",
 							"    return book.name === 'The Russian'",
 							"})",
 							"",
+							"// Extracting the Id of the book and setting it to a variable",
 							"if(russianBook){",
 							"    pm.environment.set('bookId', russianBook.id);",
 							"}",
-							"",
-							"const jsonData = xml2Json(response)"
+							""
 						],
 						"type": "text/javascript"
 					}
