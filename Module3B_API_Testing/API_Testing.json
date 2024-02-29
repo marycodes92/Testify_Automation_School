@@ -14,14 +14,15 @@
 					"script": {
 						"id": "2d7a6003-70bd-490b-9f53-4ae64607badd",
 						"exec": [
+							"const respData = pm.response.json();",
+							"",
 							"pm.test('Verify status code 200', ()=>{",
 							"    pm.response.to.have.status(200);",
 							"    pm.response.to.have.status('OK');",
 							"})",
 							"",
-							"const responseBody = pm.response.json();",
 							"pm.test('verify API status', ()=>{",
-							"    pm.expect(responseBody.status).to.eql('OK')",
+							"    pm.expect(respData.status).to.eql('OK');",
 							"})",
 							""
 						],
