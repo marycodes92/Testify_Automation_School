@@ -145,6 +145,10 @@
 						"exec": [
 							"const respData = pm.response.json();",
 							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
 							"pm.test('verify the book name and author', ()=>{",
 							"    pm.expect(respData).to.be.an('object');",
 							"    pm.expect(respData.id).to.eql(5);",
