@@ -210,6 +210,11 @@
 						"exec": [
 							"const respData = pm.response.json();",
 							"",
+							"pm.test('verify status code status', ()=>{",
+							"    pm.response.to.have.status(201);",
+							"    pm.response.to.have.status('Created');",
+							"})",
+							"",
 							"pm.test('verify that order is placed', ()=>{",
 							"    pm.expect(respData).to.not.be.undefined;",
 							"    pm.expect(respData).to.have.property('created');",
@@ -274,6 +279,10 @@
 					"script": {
 						"id": "e6a8c5ce-907c-49b5-9576-621377942809",
 						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
 							""
 						],
 						"type": "text/javascript"
@@ -308,6 +317,20 @@
 		},
 		{
 			"name": "Get an order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "97981ddc-337d-480f-b0dc-367b941f11cf",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "15da8eb3-0720-4755-9783-5f4add2c2e8b",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -366,7 +389,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "",
+					"raw": "{\n    \"customerName\": \"{{$randomLastName}}\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -385,9 +408,8 @@
 					],
 					"variable": [
 						{
-							"id": "f20c9ba7-1885-4d41-a3a6-78b41141245e",
 							"key": "orderId",
-							"value": ""
+							"value": "{{orderId}}"
 						}
 					]
 				}
