@@ -232,6 +232,8 @@
 							"",
 							"const respData = pm.response.json();",
 							"pm.collectionVariables.set('orderId', respData.orderId);",
+							"",
+							"postman.setNextRequest(null);",
 							""
 						],
 						"type": "text/javascript"
