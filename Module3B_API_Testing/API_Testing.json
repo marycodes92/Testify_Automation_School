@@ -109,7 +109,10 @@
 							"if(russianBook){",
 							"    pm.environment.set('bookId', russianBook.id);",
 							"}",
-							""
+							"",
+							"pm.test('test to verify the type of The Russion', ()=>{",
+							"    pm.expect(russianBook.type).to.eql('fiction');",
+							"})"
 						],
 						"type": "text/javascript"
 					}
