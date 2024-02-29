@@ -211,8 +211,14 @@
 							"const respData = pm.response.json();",
 							"",
 							"pm.test('verify that order is placed', ()=>{",
-							"    pm.expect(respData).toBeDefined()",
-							"})"
+							"    pm.expect(respData).to.not.be.undefined;",
+							"    pm.expect(respData).to.have.property('created');",
+							"    pm.expect(respData).to.have.property('orderId');",
+							"    pm.expect(respData.created).to.eql(true);",
+							"})",
+							"",
+							"pm.collectionVariables.set('orderId', respData.orderId);",
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -307,6 +313,12 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -330,7 +342,7 @@
 					"variable": [
 						{
 							"key": "orderId",
-							"value": ""
+							"value": "{{orderId}}"
 						}
 					]
 				}
@@ -468,6 +480,10 @@
 			"key": "token",
 			"value": "0363adb773aa2219a9623834413aae7640094cd8b18a2e1168d426f709295cd7",
 			"type": "string"
+		},
+		{
+			"key": "orderId",
+			"value": ""
 		}
 	]
 }
