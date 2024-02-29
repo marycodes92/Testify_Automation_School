@@ -208,7 +208,11 @@
 					"script": {
 						"id": "1ea0a223-8abf-4282-9062-fa6a046ed7d0",
 						"exec": [
-							""
+							"const respData = pm.response.json();",
+							"",
+							"pm.test('verify that order is placed', ()=>{",
+							"    pm.expect(respData).toBeDefined()",
+							"})"
 						],
 						"type": "text/javascript"
 					}
@@ -245,7 +249,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"bookId\": {{bookId}},\n  \"customerName\": {{$randomFullName}}\n}",
+					"raw": "{\n  \"bookId\": {{bookId}},\n  \"customerName\": \"{{$randomFullName}}\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
