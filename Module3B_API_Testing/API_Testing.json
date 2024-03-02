@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "a5e861c5-63c4-4856-9ec1-1d5269b1c7ed",
-		"name": "TAS API Collection",
+		"name": "TAS_API_Collection",
 		"description": "# Simple Books API\n\nThis API allows you to reserve a book.\n\nThe API is available at `https://simple-books-api.glitch.me`\n\n## Endpoints\n\n### Status\n\nGET `/status`\n\nReturns the status of the API.\n\n### List of books\n\nGET `/books`\n\nReturns a list of books.\n\nOptional query parameters:\n\n- type: fiction or non-fiction\n- limit: a number between 1 and 20.\n    \n\n### Get a single book\n\nGET `/books/:bookId`\n\nRetrieve detailed information about a book.\n\n### Submit an order\n\nPOST `/orders`\n\nAllows you to submit a new order. Requires authentication.\n\nThe request body needs to be in JSON format and include the following properties:\n\n- `bookId` - Integer - Required\n- `customerName` - String - Required\n    \n\nExample\n\n```\nPOST /orders/\nAuthorization: Bearer <YOUR TOKEN>\n{\n  \"bookId\": 1,\n  \"customerName\": \"John\"\n}\n\n ```\n\nThe response body will contain the order Id.\n\n### Get all orders\n\nGET `/orders`\n\nAllows you to view all orders. Requires authentication.\n\n### Get an order\n\nGET `/orders/:orderId`\n\nAllows you to view an existing order. Requires authentication.\n\n### Update an order\n\nPATCH `/orders/:orderId`\n\nUpdate an existing order. Requires authentication.\n\nThe request body needs to be in JSON format and allows you to update the following properties:\n\n- `customerName` - String\n    \n\nExample\n\n```\nPATCH /orders/PF6MflPDcuhWobZcgmJy5\nAuthorization: Bearer <YOUR TOKEN>\n{\n  \"customerName\": \"John\"\n}\n\n ```\n\n### Delete an order\n\nDELETE `/orders/:orderId`\n\nDelete an existing order. Requires authentication.\n\nThe request body needs to be empty.\n\nExample\n\n```\nDELETE /orders/PF6MflPDcuhWobZcgmJy5\nAuthorization: Bearer <YOUR TOKEN>\n\n ```\n\n## API Authentication\n\nTo submit or view an order, you need to register your API client.\n\nPOST `/api-clients/`\n\nThe request body needs to be in JSON format and include the following properties:\n\n- `clientName` - String\n- `clientEmail` - String\n    \n\nExample\n\n```\n{\n   \"clientName\": \"Postman\",\n   \"clientEmail\": \"valentin@example.com\"\n}\n\n ```\n\nThe response body will contain the access token. The access token is valid for 7 days.\n\n**Possible errors**\n\nStatus code 409 - \"API client already registered.\" Try changing the values for `clientEmail` and `clientName` to something else.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -12,7 +12,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "2d7a6003-70bd-490b-9f53-4ae64607badd",
+						"id": "3406e899-c7bf-4abf-89f4-011dc50f229e",
 						"exec": [
 							"const respData = pm.response.json();",
 							"",
@@ -25,7 +25,7 @@
 							"    pm.expect(respData.status).to.eql('OK');",
 							"})",
 							"",
-							"postman.setNextRequest('Place a book order')"
+							"postman.setNextRequest('Place a book order');"
 						],
 						"type": "text/javascript"
 					}
@@ -38,7 +38,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "https://simple-books-api.glitch.me/status"
+				"url": "{{baseUrl}}/status"
 			},
 			"response": []
 		},
@@ -81,7 +81,7 @@
 						}
 					}
 				},
-				"url": "https://simple-books-api.glitch.me/api-clients"
+				"url": "{{baseUrl}}/api-clients"
 			},
 			"response": []
 		},
