@@ -132,7 +132,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "https://simple-books-api.glitch.me/books"
+				"url": "{{baseUrl}}/books"
 			},
 			"response": []
 		},
@@ -181,12 +181,9 @@
 					}
 				},
 				"url": {
-					"raw": "https://simple-books-api.glitch.me/books/:bookId",
-					"protocol": "https",
+					"raw": "{{baseUrl}}/books/:bookId",
 					"host": [
-						"simple-books-api",
-						"glitch",
-						"me"
+						"{{baseUrl}}"
 					],
 					"path": [
 						"books",
@@ -278,7 +275,7 @@
 						}
 					}
 				},
-				"url": "https://simple-books-api.glitch.me/orders"
+				"url": "{{baseUrl}}/orders"
 			},
 			"response": []
 		},
@@ -322,7 +319,7 @@
 						}
 					}
 				},
-				"url": "https://simple-books-api.glitch.me/orders"
+				"url": "{{baseUrl}}/orders"
 			},
 			"response": []
 		},
@@ -365,12 +362,9 @@
 					}
 				},
 				"url": {
-					"raw": "https://simple-books-api.glitch.me/orders/:orderId",
-					"protocol": "https",
+					"raw": "{{baseUrl}}/orders/:orderId",
 					"host": [
-						"simple-books-api",
-						"glitch",
-						"me"
+						"{{baseUrl}}"
 					],
 					"path": [
 						"orders",
