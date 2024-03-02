@@ -25,7 +25,7 @@
 							"    pm.expect(respData.status).to.eql('OK');",
 							"})",
 							"",
-							"postman.setNextRequest('Place a book order');"
+							"// postman.setNextRequest('Place a book order');"
 						],
 						"type": "text/javascript"
 					}
@@ -230,7 +230,7 @@
 							"const respData = pm.response.json();",
 							"pm.collectionVariables.set('orderId', respData.orderId);",
 							"",
-							"postman.setNextRequest(null);",
+							"// postman.setNextRequest(null);",
 							""
 						],
 						"type": "text/javascript"
