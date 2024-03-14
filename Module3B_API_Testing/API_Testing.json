@@ -114,7 +114,7 @@
 							"",
 							"// Finding the book with namee 'Th Russian'",
 							"const russianBook = responseData.find((book)=>{",
-							"    return book.name === 'The Russian'",
+							"    return book.name === 'The Midnight Library'",
 							"})",
 							"",
 							"// Extracting the Id of the book and setting it to a variable",
