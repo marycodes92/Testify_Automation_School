@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node module2-CI_CD/index.js"
+    "start": "node module2-CI_CD/index.js",
+    "run-all": "for all in './module3-JavaScript'/*.js do node \"$file\"; done"
   },
   "keywords": [],
   "author": "",
