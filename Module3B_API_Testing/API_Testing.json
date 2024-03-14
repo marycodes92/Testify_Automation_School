@@ -53,7 +53,12 @@
 							"pm.test('Verify status code 201', ()=>{",
 							"    pm.response.to.have.status(201)",
 							"    pm.response.to.have.status('Created');",
-							"})"
+							"})",
+							"",
+							"const respData = pm.response.json();",
+							"",
+							"console.log(respData)",
+							"pm.collectionVariables.set('token', respData.accessToken);"
 						],
 						"type": "text/javascript"
 					}
