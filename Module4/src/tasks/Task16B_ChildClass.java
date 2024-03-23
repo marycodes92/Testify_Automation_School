@@ -17,3 +17,4 @@ public class Task16B_ChildClass extends Task16B_ParentClass{
         System.out.println("Obi is a Basket player");
     }
 }
+
