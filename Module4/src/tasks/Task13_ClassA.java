@@ -20,7 +20,7 @@ public class Task13_ClassA {
         tires = carTires;
     }
 
-    String moving(String action ){
-        return action;
-    }
+//    String moving(String action ){
+//        return action;
+//    }
 }

@@ -5,4 +5,15 @@ package tasks;
 // Invoke all 5 methods in a main method in the child class "B"
 
 public class Task15_ClassA {
+    void computerScience(){
+        System.out.println("I am in Computer Science department");
+    }
+
+    void statistics(){
+        System.out.println("I am in Statistics department");
+    }
+
+    void psychology(){
+        System.out.println("I am in Psychology department");
+    }
 }
