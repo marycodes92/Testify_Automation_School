@@ -17,7 +17,22 @@ package tasks;
     write a code in the printName method that will print the instance member which
     is "Delta" and whatever name the user enter when invoking the method
  */
-public class Task19 {
+public class Task19_ClassA {
+    final String ballSize = "Medium";
+    String ballColour = "orange";
+    String ballTexture = "rough";
+
+    public static void main(String[] args) {
+        Task19_ClassA object = new Task19_ClassA();
+        object.change();
+
+        System.out.println(Task19_Static.ballType);
+    }
+
+    public void change(){
+        ballColour = "Blue";
+        System.out.println("Cannot change ballSize");
+    }
 }
 
 

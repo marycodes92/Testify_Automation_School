@@ -8,5 +8,19 @@ package tasks;
     OAuth button will not be applicable to all login pages. with your knowledge
     of Abstract classes, Create a class that others developers will have to inherit from.
 * */
-public class Task17A {
+public abstract class Task17A_Login {
+    public abstract void loginForm(String username, String password);
+    public abstract void forgotPassword();
+    public abstract void signInBtn();
+
+    public Boolean rememberMe(boolean toggle){
+        return toggle;
+    };
+
+    public void continueToHome(){
+        System.out.println("Return to Home page");
+    }
+    public void oAuth(){
+        System.out.println("Here is your authentication token");
+    }
 }

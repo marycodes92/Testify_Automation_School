@@ -6,5 +6,6 @@ package tasks;
     or dashboard is successful. As the test Lead, create an interface that the
     testers should.
  */
-public class Task17B {
+public interface Task17B {
+    public void test();
 }
