@@ -512,7 +512,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "76bda9a8-6ac5-464c-8b67-fcc23c1e21c6",
+				"id": "4cd454b6-a3cb-4d71-9969-a151ec9af20b",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -522,27 +522,12 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "f5ba831e-04a1-40f3-91bc-6f832eae66e7",
+				"id": "312831d7-3ea6-49b9-875e-9056c37d77ce",
 				"type": "text/javascript",
 				"exec": [
 					""
 				]
 			}
-		}
-	],
-	"variable": [
-		{
-			"key": "token",
-			"value": "0d473b28d094d45e24911787e958cc6872b53fdc4fbba1ca05a73945beb9c986",
-			"type": "string"
-		},
-		{
-			"key": "orderId",
-			"value": ""
-		},
-		{
-			"key": "bookId",
-			"value": ""
 		}
 	]
 }
