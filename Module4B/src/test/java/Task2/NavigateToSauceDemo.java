@@ -4,11 +4,8 @@ package Task2;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
-import java.util.Collections;
-
-public class NavigateToGuruBank {
+public class NavigateToSauceDemo {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "/Users/maryonuorah/Desktop/Testify Academy/Tasks/Testify_Automation_School/Module4B/src/chromedriver");
 
