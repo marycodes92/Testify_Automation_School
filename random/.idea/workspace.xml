@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99abf5d1-3fde-44c0-84c2-0732847be6c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Module4/src/tasks/Task13_ClassA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module4/src/tasks/Task13_ClassB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module4/src/tasks/Task14_ClassA_SquareShape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module4/src/tasks/Task15_ClassA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module4/src/tasks/Task16A.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module4/src/tasks/Task16B.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module4/src/tasks/Task17A.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module4/src/tasks/Task17B.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module4/src/tasks/Task18.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module4/src/tasks/Task19.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Module4/src/Task12A/ClassA.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Module4/src/Task12A/ClassA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Module4/src/tasks/ClassA.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Module4/src/tasks/Task11_ClassA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Module4/src/tasks/ClassB.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Module4/src/tasks/Task11_ClassB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
