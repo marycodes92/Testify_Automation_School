@@ -9,11 +9,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
  */
 public class Task4 {
     public static void main(String[] args) throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver", "/Users/maryonuorah/Desktop/Testify Academy/Tasks/Testify_Automation_School/Module4B/src/chromedriver");
+
         WebDriver driver = new ChromeDriver();
 
         driver.get("http://demo.guru99.com/");
         driver.findElement(By.linkText("Security Project")).click();
-        driver.findElement(By.xpath("//tbody/tr[1]/td[2]/input[1]")).sendKeys("username");
-        driver.findElement(By.xpath("//tbody/tr[2]/td[2]/input[1]")).sendKeys("password");
+        driver.findElement(By.id("dismiss-button")).click();
+        driver.findElement(By.xpath("//input[@name='uid'or@text='text']")).sendKeys("username");
+        driver.findElement(By.xpath("//input[@name='password'or@type='password']")).sendKeys("password");
     }
 }
