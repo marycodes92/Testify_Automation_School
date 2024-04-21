@@ -9,5 +9,7 @@ public class NavigateToTestarsQuarters {
 
         driver.manage().window().maximize();
         driver.get("http://testarsquarter.com/");
+
+        driver.close();
     }
 }

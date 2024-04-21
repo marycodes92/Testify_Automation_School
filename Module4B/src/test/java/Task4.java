@@ -18,5 +18,7 @@ public class Task4 {
         driver.findElement(By.id("dismiss-button")).click();
         driver.findElement(By.xpath("//input[@name='uid'or@text='text']")).sendKeys("username");
         driver.findElement(By.xpath("//input[@name='password'or@type='password']")).sendKeys("password");
+
+        driver.close();
     }
 }

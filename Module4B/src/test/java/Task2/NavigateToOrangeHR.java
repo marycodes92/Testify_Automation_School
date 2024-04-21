@@ -9,5 +9,7 @@ public class NavigateToOrangeHR {
 
         driver.manage().window().maximize();
         driver.navigate().to("https://opensource-demo.orangehrmlive.com/");
+
+        driver.close();
     }
 }

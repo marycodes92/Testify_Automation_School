@@ -31,5 +31,7 @@ public class Task5 {
         driver.findElement(By.xpath("//div[@id='shopping_cart_container']")).click();
         Thread.sleep(3000);
         driver.findElement(By.xpath("//button[@id='checkout']")).click();
+
+        driver.close();
     }
 }

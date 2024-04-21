@@ -14,5 +14,6 @@ public class NavigateToSauceDemo {
         driver.manage().window().maximize();
 
         driver.get("https://www.saucedemo.com"); //navigate to the url
+        driver.close();
     }
 }
