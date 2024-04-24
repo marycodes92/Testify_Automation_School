@@ -40,6 +40,6 @@ public class Task7 {
             String description = descriptionElements.get(i).getText();
             System.out.println(day + ": " + description);
         }
-        driver.close();
+        driver.quit();
     }
 }
