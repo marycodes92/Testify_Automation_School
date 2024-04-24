@@ -14,7 +14,7 @@ public class Task7 {
      * for each of the days shown in a readable and understandable manner.
      */
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "/Users/maryonuorah/Desktop/Testify Academy/Tasks/Testify_Automation_School/Module4B/src/chromedriver");
 
         WebDriver driver = new ChromeDriver();
@@ -22,17 +22,16 @@ public class Task7 {
         driver.manage().window().maximize();
 
         driver.get("https://worldweather.wmo.int/en/home.html");
+        
+        Thread.sleep(5000);
         WebElement search = driver.findElement(By.xpath("//input[@id='q_search'or@class='top_searchbox']"));
         search.sendKeys("Lagos, Nigeria");
 
+        Thread.sleep(3000);
+        
         driver.findElement(By.cssSelector("input[class=top_searchbox_submit],input[type=submit]")).click();
 
-        try{
-            Thread.sleep(5000);
-        } catch (InterruptedException error){
-            System.out.println(error);
-        }
-
+        Thread.sleep(5000);
         List<WebElement> daysElement = driver.findElements(By.cssSelector("div.city_fc_date.fs0"));
         List<WebElement> descriptionElements = driver.findElements(By.cssSelector("div.city_fc_desc.fs0"));
 
