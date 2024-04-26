@@ -1,4 +1,4 @@
-package org.example;
+package Tasks;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

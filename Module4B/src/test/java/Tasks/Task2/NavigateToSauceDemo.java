@@ -1,4 +1,4 @@
-package Task2;
+package Tasks.Task2;
 
 //Create three different classes and launch any three websites of your choice from each of them
 

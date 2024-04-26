@@ -1,3 +1,5 @@
+package Tasks;
+
 public class Task3 {
     /**
      * Inspect 3 elements on the google homepage, and send screenShots pointing

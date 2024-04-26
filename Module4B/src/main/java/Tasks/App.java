@@ -1,4 +1,4 @@
-package org.example;
+package Tasks;
 
 /**
  * Hello world!
