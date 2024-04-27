@@ -34,6 +34,7 @@ public class Task7 {
         driver.findElement(By.cssSelector("input[class=top_searchbox_submit],input[type=submit]")).click();
 
         Thread.sleep(5000);
+//        Fetching all the elements
         List<WebElement> daysElement = driver.findElements(By.cssSelector("div.city_fc_date.fs0"));
         List<WebElement> descriptionElements = driver.findElements(By.cssSelector("div.city_fc_desc.fs0"));
 
