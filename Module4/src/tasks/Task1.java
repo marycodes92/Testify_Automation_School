@@ -1,5 +1,7 @@
 package tasks;
 
+import java.util.Arrays;
+
 public class Task1 {
     public static void main(String[] args) {
         System.out.println("This is my first java task");
@@ -7,5 +9,4 @@ public class Task1 {
         System.out.println("I'm so excited to see what I'd create with Java");
         System.out.println("I've always been scared of writing Java");
     }
-
 }

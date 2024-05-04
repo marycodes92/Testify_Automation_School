@@ -20,7 +20,9 @@ import org.testng.annotations.Test;
  * -Click on “Find Flights”
  * Select a flight
  * Copy the flight number and paste into the Zipcode field
- * Fill all other fields with valid inputs
+ * Fill all other fields with valid
+ * ]inputs
+ *
  * Tick the‘RememberMe’checkbox and Purchase flight
  */
 public class Project {
