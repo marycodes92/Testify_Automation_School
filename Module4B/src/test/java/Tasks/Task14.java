@@ -28,8 +28,8 @@ public class Task14 {
 
         driver.findElement(By.xpath("//span[contains(text(),'Tutorials')]")).click();
 
-        WebDriverWait wait = new WebDriverWait(driver, 30000);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("element")));
+//        WebDriverWait wait = new WebDriverWait(driver, 30000);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("element")));
 
         driver.quit();
     }
