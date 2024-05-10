@@ -5,3 +5,10 @@ Invoke the function outside the function block
 
 Take note of the function invoke and put the Python whitespace rule in mind
 """
+
+def greet():
+    print("Hello World")
+    greet()
+    return
+
+greet()
