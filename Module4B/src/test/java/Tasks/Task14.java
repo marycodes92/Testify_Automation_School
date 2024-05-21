@@ -1,11 +1,10 @@
 package Tasks;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
@@ -16,20 +15,22 @@ public class Task14 {
      * Click on the tutorial button on the top left corner of the page
      */
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "/Users/maryonuorah/Desktop/Testify Academy/Tasks/Testify_Automation_School/Module4B/src/chromedriver");
 
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
 
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
 
         driver.get("https://www.toolsqa.com/");
 
-        driver.findElement(By.xpath("//span[contains(text(),'Tutorials')]")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//button[@id='accept-cookie-policy']")).click();
+        Thread.sleep(2000);
 
-//        WebDriverWait wait = new WebDriverWait(driver, 30000);
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("element")));
+        driver.findElement(By.xpath("//header/nav[1]/div[1]/div[1]/div[4]/a[1]")).click();
+        Thread.sleep(2000);
 
         driver.quit();
     }
