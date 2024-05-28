@@ -8,3 +8,12 @@ assert that the items you clicked and added to cart are what are displayed on th
 Click on the checkout button. 6. Input first name last name and postal code and click on continue.
 Assert that the item showed on the CHECKOUT: OVERVIEW page is the item that was added to cart from the first page.
 Click on the "Finish" button. Assert that user sees an success message "THANK YOU FOR YOUR ORDER".
+
+
+
+Task 19 Question
+Add your project from lesson 17 and 18 into two different packages.
+create at least 3 different classes for the two different websites in each package.
+Have at least one test case that verifies that the user is on the homepage.
+Group the test cases that verify that the user is on the homePage (On the two different websites).
+configure your XML file to Run only the homepage tests from the command line.
