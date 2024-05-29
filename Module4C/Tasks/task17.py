@@ -10,5 +10,3 @@ class Human:
 
 # initializing the class
 isaac = Human()
-
-print(isaac.gender)
