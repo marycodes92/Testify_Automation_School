@@ -3,7 +3,7 @@ import pytest
 from ..utilities.driver_setup import get_driver
 from ..pages.menu_page import MenuPage
 from ..pages.login_page import LoginPage
-# from ..pages.products_page import Products
+from ..pages.products_page import ProductPage
 
 
 @pytest.fixture
@@ -54,5 +54,5 @@ def test_valid_login(driver, navigate_to_login):
     login_page.submit_login()
 
     time.sleep(5)
-    # products = Products(driver)
+    # products = ProductPage(driver)
     # products.get_product_page().is_displayed()

@@ -1,11 +1,12 @@
 from appium.webdriver.common.mobileby import MobileBy
-from base_page import BasePage
+from .base_page import BasePage
 
 
-class Products(BasePage):
+class ProductPage(BasePage):
     PRODUCTS_PAGE = (MobileBy.LINK_TEXT, 'Products')
     SORT_BUTTON = (MobileBy.XPATH, '//android.view.ViewGroup[@content-desc="sort button"]')
     PRICE_ASC = (MobileBy.XPATH, '//android.view.ViewGroup[@content-desc="priceAsc"]')
+    ALL_PRODUCTS = (MobileBy.CLASS_NAME, 'android.widget.TextView')
     ITEM1 = (MobileBy.XPATH, '(//android.view.ViewGroup[@content-desc="store item"])[1]/android.view.ViewGroup[1]')
     ITEM2 = (MobileBy.XPATH, '(//android.view.ViewGroup[@content-desc="store item"])[2]/android.view.ViewGroup[1]')
     ITEM3 = (MobileBy.XPATH, '(//android.view.ViewGroup[@content-desc="store item"])[3]/android.view.ViewGroup[1]')
@@ -16,9 +17,6 @@ class Products(BasePage):
     REVIEW_MESSAGE = (MobileBy.XPATH, '//android.widget.TextView[@text="Thank you for submitting your review!"]')
     CLOSE_MODAL_BUTTON = (MobileBy.ACCESSIBILITY_ID, 'Close Modal button')
     ADD_TO_CART = (MobileBy.ACCESSIBILITY_ID, 'Add To Cart button')
-
-    def get_product_page(self):
-        return self.find_element(self.PRODUCTS_PAGE)
 
     def get_sort_icon(self):
         self.click(self.SORT_BUTTON)
@@ -31,6 +29,13 @@ class Products(BasePage):
 
     def sort_price_by_ascending(self):
         self.click(self.PRICE_ASC)
+
+    def get_all_products(self):
+        return self.find_elements(self.ALL_PRODUCTS)
+
+    def get_product_names(self):
+        products = self.get_all_products()
+        return [product.text for product in products]
 
     def select_item_1(self):
         self.click(self.ITEM1)
@@ -56,3 +61,5 @@ class Products(BasePage):
     def get_close_modal_btn(self):
         self.click(self.CLOSE_MODAL_BUTTON)
 
+    def get_product_page(self):
+        return self.find_element(self.PRODUCTS_PAGE)
